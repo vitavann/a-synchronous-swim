@@ -1,3 +1,5 @@
+const index = require('../index.js')
+
 const messages = []; // the storage unit for messages
 
 module.exports.enqueue = (message) => {

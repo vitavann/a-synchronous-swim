@@ -22,7 +22,9 @@ describe('server responses', () => {
   });
 
   it('should respond to a GET request for a swim command', (done) => {
-    // write your test here
+    // httpHandler.router(req, res);
+    // module.exports.router
+    // expect
     done();
   });
 

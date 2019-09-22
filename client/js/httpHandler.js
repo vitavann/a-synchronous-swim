@@ -6,6 +6,20 @@
   // TODO: build the swim command fetcher here
   //
 
+  const fetcher = () => {
+    $.ajax({
+      type: 'GET',
+      url: serverUrl,
+      success: (data) => {
+        SwimTeam.move(data);
+      },
+     complete: setInterval(fetcher, 30000),
+      error: () => {
+        console.log('error')
+    }
+    });
+  }
+  fetcher();
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
   // Note: remember to fix the URL below.
